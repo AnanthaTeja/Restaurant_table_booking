@@ -1,18 +1,23 @@
 import { create } from "zustand";
 import { Table, Reservation } from "./types";
 
+interface UserDetails {
+  name: string;
+  phone: string;
+  guests: number;
+}
+
 interface BookingStore {
   resetBooking: () => void;
-  userDetails: {
-    name: string;
-    phone: string;
-    guests: number;
-  } | null;
+  userDetails: UserDetails | null;
   tables: Table[];
   reservations: Reservation[];
   selectedTable: Table | null;
   selectedDate: string;
   selectedTime: string;
+  // deleteReservation: any;
+  setUserDetails: (userDetails: UserDetails) => void;
+  deleteReservation: (id: number) => void;
   setTables: (tables: Table[]) => void;
   setReservations: (reservations: Reservation[]) => void;
   selectTable: (table: Table) => void;
