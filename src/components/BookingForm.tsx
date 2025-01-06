@@ -24,6 +24,8 @@ export function BookingForm() {
     const reservation = {
       id: Date.now(),
       tableId: selectedTable.id,
+      tableNumber: selectedTable.number,
+      phone: formData.get("") as string,
       name: formData.get("name") as string,
       email: formData.get("email") as string,
       date: selectedDate,

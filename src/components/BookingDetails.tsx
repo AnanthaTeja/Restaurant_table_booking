@@ -15,6 +15,7 @@ export function BookingDetails() {
     resetBooking,
     setDateTime,
   } = useStore();
+
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   const handleConfirm = () => {
@@ -36,7 +37,7 @@ export function BookingDetails() {
       tableNumber: selectedTable.number,
       name: userDetails.name,
       phone: userDetails.phone,
-      email :"",
+      email: "",
       date: selectedDate,
       time: selectedTime,
       guests: userDetails.guests,

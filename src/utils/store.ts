@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { Table, Reservation } from "./types";
 
 interface BookingStore {
+  resetBooking: () => void;
   userDetails: {
     name: string;
     phone: string;
